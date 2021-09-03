@@ -1,0 +1,21 @@
+.red{
+background: #ff9595;
+border-radius: 3px;
+padding: 10px;
+border: 1px solid #fd4d4d;
+color: #8e0c0c;
+}
+.yellow{
+  color: #61610c;
+  background: #ffff61;
+  border: 1px solid #dcdc00;
+  border-radius: 3px;
+  padding: 10px;
+}
+.green{
+  background: rgba(151, 210, 127, .5);
+  padding: 10px;
+  color: rgb(47 51 45);
+  border: 1px solid rgba(151, 210, 127, .8);
+  border-radius: 3px;
+}
