@@ -2,8 +2,22 @@ import React, { useState } from "react"
 import ErrorMessages from "./ErrorMessages"
 import ProtoTypes from "prop-types" 
 import styled from "@emotion/styled"
+import { keyframes } from '@emotion/react'
+const fadeInUp = keyframes`
+  0% {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  }
+  100% {
+  opacity: 1;
+  transform: none;
+  }
+  `
 const PresupuestoInicialDiv = styled.div`
 padding: 50px 25px;
+animation-name: ${fadeInUp};
+animation-duration: 1s;
+animation-fill-mode: both;
 h2{
   color:#fff;
   letter-spacing:3px;
@@ -31,6 +45,10 @@ div{
   padding: 7px 25px;
   letter-spacing: 3px;
 }
+}
+button:hover,
+button:active{
+  transform: scale(1.05);
 }
 `
 

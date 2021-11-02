@@ -5,6 +5,21 @@ import GastosCard from "./components/GastosCard"
 import ControlPresupuestos from "./components/ControlPresupuestos"
 import styled from "@emotion/styled"
 import { keyframes } from '@emotion/react'
+const fadeIn = keyframes`
+0% {opacity: 0;}
+100% {opacity: 1;}
+`
+const fadeInDown = keyframes`
+0% {
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  }
+  100% {
+  opacity: 1;
+  transform: none;
+  }
+`
+
 const AppDiv = styled.div`
 background: #161722;
 margin: 0px;
@@ -21,6 +36,9 @@ header{
   justify-content:center;
   align-items: center;
   flex-wrap: wrap;
+  animation-name: ${fadeInDown};
+  animation-duration: 1s;
+  animation-fill-mode: both;
   h1{
     margin:0px;
     font-size: 2rem;
@@ -48,11 +66,6 @@ main{
     }
   }
 }
-`
-
-const fadeIn = keyframes`
-0% {opacity: 0;}
-100% {opacity: 1;}
 `
 
 const AppBudgetDiv = styled.div`
